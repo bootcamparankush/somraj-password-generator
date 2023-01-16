@@ -59,7 +59,7 @@ function getUserPrompts (){
     return false;
   }
  
-console.log (getUserPrompts);
+// console.log (getUserPrompts);
 
   //prompts for lower case letters
  if( confirm ("Do you want your password to consist of lower case letters?")) {
@@ -79,8 +79,8 @@ console.log (getUserPrompts);
 //prompts for special characters
   if( confirm ("Do you want your password to consist of  special characters ?")) {
     passwordChoicearray = passwordChoicearray.concat(specialCharArray);
+    console.log (passwordChoicearray);
   }
-  console.log (passwordChoicearray);
+  
   return true;
 }
-
