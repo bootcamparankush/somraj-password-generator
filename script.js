@@ -43,9 +43,7 @@ function generatePassword () {
   return password;
 
 };
-
 //function to prompt user input(s) for four various combinations
-
 function getUserPrompts (){
   
   passwordChoicearray = [];
@@ -53,16 +51,14 @@ function getUserPrompts (){
   //parseInt converts into a number if the user enteres anything other than number
   passwordLength = parseInt(prompt("How many characters of length you want your password to be. Choose between 8 to 128 characters")); 
   
-  
   //validate if the password is between 8 and 128 characters
   if (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) { 
     alert ("Password length needs to be a number between 8 to 128 digits. Please re-enter and try again")
     return false;
   }
- 
-// console.log (getUserPrompts);
 
-  //prompts for lower case letters
+// console.log (getUserPrompts);
+//prompts for lower case letters
  if( confirm ("Do you want the password to consist of lower case letters?")) {
     passwordChoicearray = passwordChoicearray.concat(lowerCaseArray);
   //  console.log (passwordChoicearray); 
@@ -90,3 +86,4 @@ function getUserPrompts (){
   } 
   return true;
 }
+//completes code for password generator
