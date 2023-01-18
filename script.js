@@ -50,8 +50,9 @@ function getUserPrompts (){
   
   passwordChoicearray = [];
   
-  passwordLength = parseInt(prompt("How many characters of length you want your password to be. Choose between 8 to 128 characters")); //parseInt converts string into a number
-  // passwordLength = prompt("How many characters of length you want your password to be. Choose between 8 to 128 characters"); //parseInt converts string into a number
+  //parseInt converts into a number if the user enteres anything other than number
+  passwordLength = parseInt(prompt("How many characters of length you want your password to be. Choose between 8 to 128 characters")); 
+  
   
   //validate if the password is between 8 and 128 characters
   if (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) { 
@@ -82,5 +83,11 @@ function getUserPrompts (){
     console.log (passwordChoicearray);
   }
   
+  //if no choices are made by the user in the prompts options there is no password generated and user is alerted accordingly
+  
+  if (passwordChoicearray.length == 0) {
+    alert("Alert: No choices selected, hence password genrated");
+    return false;
+  } 
   return true;
 }
