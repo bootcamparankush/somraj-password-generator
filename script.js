@@ -63,30 +63,29 @@ function getUserPrompts (){
 // console.log (getUserPrompts);
 
   //prompts for lower case letters
- if( confirm ("Do you want your password to consist of lower case letters?")) {
+ if( confirm ("Do you want the password to consist of lower case letters?")) {
     passwordChoicearray = passwordChoicearray.concat(lowerCaseArray);
-   console.log (passwordChoicearray); 
+  //  console.log (passwordChoicearray); 
   }
 //prompts for upper case letters 
-  if( confirm ("Do you want your password to consist of  upper case letters?")) {
+  if( confirm ("Do you want the password to consist of  upper case letters?")) {
     passwordChoicearray = passwordChoicearray.concat(upperCaseArray);
-    console.log (passwordChoicearray);
+    // console.log (passwordChoicearray);
   }
 //prompts for numbers
-  if( confirm ("Do you want your to consist of numbers?")) {
+  if( confirm ("Do you want the password to consist of numbers?")) {
     passwordChoicearray = passwordChoicearray.concat(numbersArray);
     console.log (passwordChoicearray);
   }
 //prompts for special characters
-  if( confirm ("Do you want your password to consist of  special characters ?")) {
+  if( confirm ("Do you want the password to consist of  special characters ?")) {
     passwordChoicearray = passwordChoicearray.concat(specialCharArray);
-    console.log (passwordChoicearray);
+    // console.log (passwordChoicearray);
   }
-  
   //if no choices are made by the user in the prompts options there is no password generated and user is alerted accordingly
   
   if (passwordChoicearray.length == 0) {
-    alert("Alert: No choices selected, hence password genrated");
+    alert("Alert: Note that there are no choices selected hence there is no password generated. Please try again.");
     return false;
   } 
   return true;
